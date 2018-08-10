@@ -15,14 +15,14 @@ public class LoginTestWithOutPageObject {
     WebDriver webDriver;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         File file = new File("./src/drivers/chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
         webDriver = new ChromeDriver();
     }
 
     @Test
-    public void validLogIn(){
+    public void validLogIn() {
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         webDriver.get("https://id.kyivcity.gov.ua/sign_in");
@@ -32,7 +32,7 @@ public class LoginTestWithOutPageObject {
     }
 
     @After
-    public void tearDown(){
+    public void tearDown() {
         webDriver.quit();
     }
 
