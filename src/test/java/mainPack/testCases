@@ -3,18 +3,18 @@ Test Case Name: Success authorization
 Objective: Тестирование успешной авторизации
 Pre-conditions:
 1. Запущен браузер Chrome
-2. Открыта станица https://petition.kyivcity.gov.ua/petitions
+2. Открыта станица https://ptkiev.kitsoft.kiev.ua/petitions
 
 Test Steps:
 1. Кликнуть на Аватарке
-2. Проверить что перешёл на страницу https://id.kyivcity.gov.ua/sign_in
-3. В поле "email" ввести "qa.gioc@gmail.com"
+2. Проверить что перешёл на страницу https://id.kitsoft.kiev.ua/sign_in
+3. В поле "email" ввести "bsl604@gmail.com"
 4. Клик на кнопке "Далі"
 5. В поле "password" ввести пароль
 6. Клик на кнопке "Увійти"
-7. Проверить редирект на страницу https://my.kyivcity.gov.ua/profile
-8. В левом меню выбрать petitions
-9. Проверить редирект на страницу https://my.kyivcity.gov.ua/petitions
+7. Проверить редирект на страницу https://my.kitsoft.kiev.ua/petitions
+8. Клик на кнопке "перейти на сайт петицій"
+9.
 10.
 
 Exepected Result
@@ -30,14 +30,14 @@ Post-conditions:
 
 Test Case ID: 3
 Test Case Name:
-Objective: Фильтрация петиций по интервалу и проверить в Останніх діях
+Objective: Подписаться за петицию и проверить в Останніх діях
 Pre-conditions:
 Test Steps:
 Post-conditions:
 
 Test Case ID: 4
 Test Case Name:
-Objective: Подписаться за петицию и проверить в Останніх діях
+Objective: Фильтрация петиций по интервалу
 Pre-conditions:
 Test Steps:
 Post-conditions:
