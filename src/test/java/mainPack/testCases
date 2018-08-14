@@ -10,7 +10,7 @@ Test Steps:
 2. Проверить что перешёл на страницу https://id.kitsoft.kiev.ua/sign_in
 3. В поле "email" ввести "bsl604@gmail.com"
 4. Клик на кнопке "Далі"
-5. В поле "password" ввести пароль
+5. В поле "password" ввести пароль "bsl604fast"
 6. Клик на кнопке "Увійти"
 7. Проверить редирект на страницу https://my.kitsoft.kiev.ua/petitions
 8. Клик на кнопке "перейти на сайт петицій"

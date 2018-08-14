@@ -31,8 +31,19 @@ public class LoginTestWithOutPageObject {
         webDriver.findElement(By.name("email")).clear();
         webDriver.findElement(By.name("email")).sendKeys("bsl604@gmail.com");
 
-        webDriver.findElement(By.className("pull-right")).click();
+        //webDriver.findElement(By.className("pull-right")).click();
+        //webDriver.findElement(By.xpath(".//*[@class='btn btn-submit btn-email-submit-js']")).click();
+
         webDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+        webDriver.findElement(By.className("form-control ng-pristine ng-invalid ng-invalid-required ng-touched")).clear();
+
+      //  webDriver.findElement(By.name("password")).clear();
+      //  webDriver.findElement(By.name("password")).sendKeys("bsl604fast");
+
+        webDriver.findElement(By.tagName("button")).click();
+
+
 
     }
 
