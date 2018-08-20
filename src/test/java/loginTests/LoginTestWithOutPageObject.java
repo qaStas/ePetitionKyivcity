@@ -1,6 +1,7 @@
 package loginTests;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -44,13 +45,23 @@ public class LoginTestWithOutPageObject {
 
         webDriver.findElement(By.tagName("button")).click();
 
-        webDriver.getCurrentUrl().compareTo("https://my.kitsoft.kiev.ua/petitions1");
 
+        Assert.assertTrue("Avatar is not present", isAvatarPresent());
     }
 
     @After
     public void tearDown() {
         webDriver.quit();
+    }
+
+    private boolean isAvatarPresent (){
+        try {
+            return webDriver.findElement(
+                By.xpath(".//img[@alt='avatar']"))
+                .isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 }
