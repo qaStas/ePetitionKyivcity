@@ -39,12 +39,10 @@ public class LoginTestWithOutPageObject {
             e.printStackTrace();
         }
 
-
         webDriver.findElement(By.name("password")).clear();
         webDriver.findElement(By.name("password")).sendKeys("bsl604fast");
 
         webDriver.findElement(By.tagName("button")).click();
-
 
         Assert.assertTrue("Avatar is not present", isAvatarPresent());
     }
@@ -63,5 +61,4 @@ public class LoginTestWithOutPageObject {
             return false;
         }
     }
-
 }
