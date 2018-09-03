@@ -1,13 +1,11 @@
 package pages;
 
-import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage extends ParentPageId{
-    Logger logger = Logger.getLogger(getClass());
 
     public LoginPage(WebDriver webDriver) {
         super(webDriver, "/sign_in"); // уточнить и проверить
@@ -52,6 +50,14 @@ public class LoginPage extends ParentPageId{
         }
     }
 
+    public void focusToNewTab(){
+        for(String winHandle : webDriver.getWindowHandles()){
+            webDriver.switchTo().window(winHandle);
+            logger.info("Focus switched to new Tab");
+        }
+    }
+
+
     public void clikOnNextButton(){
         try {
             WebElement webElement = webDriver.findElement(By.className("pull-right"));
@@ -68,6 +74,7 @@ public class LoginPage extends ParentPageId{
             WebElement webElement = webDriver.findElement(By.tagName("button"));
             webElement.click();
             logger.info("Button SignIn was clicked");
+            Thread.sleep(3000);
         } catch (Exception e) {
             logger.info("Can not work with element");
             Assert.fail("Can not work with element");

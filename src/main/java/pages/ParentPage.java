@@ -8,7 +8,7 @@ public class ParentPage {
     Logger logger = Logger.getLogger(getClass());
     WebDriver webDriver;
     String expectedUrl;
-    final String baseUrl = "https://iptkiev.kitsoft.kiev.ua/petitions";
+    final String baseUrl = "https://ptkiev.kitsoft.kiev.ua/petitions";
 
     public ParentPage(WebDriver webDriver, String expectedUrl) {
         this.webDriver = webDriver;
@@ -16,6 +16,7 @@ public class ParentPage {
     }
 
     public String getCurrentUrl (){
+
         return webDriver.getCurrentUrl();
     }
 

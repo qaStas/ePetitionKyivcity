@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomeOkkPage extends ParentPageOkk {
-    public HomeOkkPage(WebDriver webDriver, String expectedUrl) {
+    public HomeOkkPage(WebDriver webDriver) {
         super(webDriver, "/");
     }
 
