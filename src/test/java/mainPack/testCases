@@ -12,7 +12,7 @@ Test Steps:
 4. Клик на кнопке "Далі"
 5. В поле "password" ввести пароль "bsl604fast"
 6. Клик на кнопке "Увійти"
-7. Проверить редирект на страницу https://my.kitsoft.kiev.ua/petitions
+7. Проверить, что на странице есть аватарка
 8. Клик на кнопке "перейти на сайт петицій"
 9.
 10.
@@ -44,7 +44,7 @@ Post-conditions:
 
 Test Case ID: 5
 Test Case Name:
-Objective: Подписаться за петицию и проверить в Останніх діях
+Objective: Подать петицию
 Pre-conditions:
 Test Steps:
 Post-conditions:

@@ -4,15 +4,15 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
-public class ParentPage {
+public class ParentPageId {
     Logger logger = Logger.getLogger(getClass());
     WebDriver webDriver;
     String expectedUrl;
-    final String baseUrl = "https://iptkiev.kitsoft.kiev.ua/petitions";
+    final String baseUrlLogIn = "https://id.kitsoft.kiev.ua";
 
-    public ParentPage(WebDriver webDriver, String expectedUrl) {
+    public ParentPageId(WebDriver webDriver, String expectedUrl) {
         this.webDriver = webDriver;
-        this.expectedUrl = baseUrl + expectedUrl;
+        this.expectedUrl = baseUrlLogIn + expectedUrl;
     }
 
     public String getCurrentUrl (){
