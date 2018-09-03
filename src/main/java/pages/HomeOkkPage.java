@@ -8,7 +8,7 @@ public class HomeOkkPage extends ParentPageOkk {
         super(webDriver, "/");
     }
 
-    public boolean isAvatarPresent (){
+    public boolean isAvatarPresent() {
         try {
             return webDriver.findElement(
                     By.xpath(".//img[@alt='avatar']"))

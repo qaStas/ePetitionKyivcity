@@ -5,25 +5,25 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LoginPage extends ParentPageId{
+public class LoginPage extends ParentPageId {
 
     public LoginPage(WebDriver webDriver) {
         super(webDriver, "/sign_in"); // уточнить и проверить
     }
 
-    public void openPage(){
-        try{
+    public void openPage() {
+        try {
             webDriver.get(baseUrlLogIn + "/sign_in");
             checkCurrentUrl();
             logger.info("Login Page was opened");
 
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("Can not open LoginPage");
             Assert.fail("Can not open LoginPage");
         }
     }
 
-    public void enterLogin (String login) {
+    public void enterLogin(String login) {
         try {
             WebElement webElement = webDriver.findElement(By.name("email"));
             webElement.clear();
@@ -36,7 +36,7 @@ public class LoginPage extends ParentPageId{
         }
     }
 
-    public void enterPass (String pass) {
+    public void enterPass(String pass) {
         try {
             Thread.sleep(3000);
             WebElement webElement = webDriver.findElement(By.name("password"));
@@ -50,15 +50,15 @@ public class LoginPage extends ParentPageId{
         }
     }
 
-    public void focusToNewTab(){
-        for(String winHandle : webDriver.getWindowHandles()){
+    public void focusToNewTab() {
+        for (String winHandle : webDriver.getWindowHandles()) {
             webDriver.switchTo().window(winHandle);
             logger.info("Focus switched to new Tab");
         }
     }
 
 
-    public void clikOnNextButton(){
+    public void clikOnNextButton() {
         try {
             WebElement webElement = webDriver.findElement(By.className("pull-right"));
             webElement.click();
@@ -69,7 +69,7 @@ public class LoginPage extends ParentPageId{
         }
     }
 
-    public void clikOnSignInButton(){
+    public void clikOnSignInButton() {
         try {
             WebElement webElement = webDriver.findElement(By.tagName("button"));
             webElement.click();

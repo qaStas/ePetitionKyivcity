@@ -41,7 +41,7 @@ public class ParentTest {
         webDriver.quit();
     }
 
-    protected void checkAC (String message, boolean actual, boolean expected){
+    protected void checkAC(String message, boolean actual, boolean expected) {
         if (actual != expected) {
             logger.error("AC failed: " + message);
         }

@@ -15,15 +15,15 @@ public class ParentPageOkk {
         this.expectedUrl = baseUrlOkk + expectedUrl;
     }
 
-    public String getCurrentUrl (){
+    public String getCurrentUrl() {
         return webDriver.getCurrentUrl();
     }
 
-    public void checkCurrentUrl (){
+    public void checkCurrentUrl() {
         try {
             Assert.assertEquals("Url is not expexted", expectedUrl, getCurrentUrl());
 
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("Cannot work with Url");
             Assert.fail("Cannot work with Url");
         }

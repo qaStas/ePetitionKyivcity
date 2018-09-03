@@ -5,7 +5,7 @@ import parentTest.ParentTest;
 
 public class LoginTest extends ParentTest {
     @Test
-    public void validLogIn(){
+    public void validLogIn() {
         homePage.openPage();
         homePage.clickOnAvatarLink();
         loginPage.focusToNewTab();
@@ -22,7 +22,7 @@ public class LoginTest extends ParentTest {
     }
 
     @Test
-    public void unValidLogIn(){
+    public void unValidLogIn() {
         homePage.openPage();
         homePage.clickOnAvatarLink();
         loginPage.focusToNewTab();
