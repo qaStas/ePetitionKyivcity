@@ -4,8 +4,22 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends ParentPageId {
+
+    @FindBy(name = "email")
+    private WebElement userNameInput;
+
+    @FindBy(name = "password")
+    private WebElement passWordInput;
+
+    @FindBy(className = "pull-right")
+    private WebElement nextButton;
+
+    @FindBy(tagName = "button")
+    private WebElement submitButton;
+
 
     public LoginPage(WebDriver webDriver) {
         super(webDriver, "/sign_in"); // уточнить и проверить
@@ -25,9 +39,8 @@ public class LoginPage extends ParentPageId {
 
     public void enterLogin(String login) {
         try {
-            WebElement webElement = webDriver.findElement(By.name("email"));
-            webElement.clear();
-            webElement.sendKeys(login);
+            userNameInput.clear();
+            userNameInput.sendKeys(login);
             logger.info(login + " was input into input Login");
 
         } catch (Exception e) {
@@ -39,9 +52,8 @@ public class LoginPage extends ParentPageId {
     public void enterPass(String pass) {
         try {
             Thread.sleep(3000);
-            WebElement webElement = webDriver.findElement(By.name("password"));
-            webElement.clear();
-            webElement.sendKeys(pass);
+            passWordInput.clear();
+            passWordInput.sendKeys(pass);
             logger.info(pass + " was input into input Pass");
 
         } catch (Exception e) {
@@ -60,8 +72,7 @@ public class LoginPage extends ParentPageId {
 
     public void clikOnNextButton() {
         try {
-            WebElement webElement = webDriver.findElement(By.className("pull-right"));
-            webElement.click();
+            nextButton.click();
             logger.info("Button Next was clicked");
         } catch (Exception e) {
             logger.info("Can not work with element");
@@ -71,8 +82,7 @@ public class LoginPage extends ParentPageId {
 
     public void clikOnSignInButton() {
         try {
-            WebElement webElement = webDriver.findElement(By.tagName("button"));
-            webElement.click();
+            submitButton.click();
             logger.info("Button SignIn was clicked");
             Thread.sleep(3000);
         } catch (Exception e) {

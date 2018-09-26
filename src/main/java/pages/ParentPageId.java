@@ -4,8 +4,9 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 
-public class ParentPageId {
+public class ParentPageId  {
     Logger logger = Logger.getLogger(getClass());
     WebDriver webDriver;
     String expectedUrl;
@@ -14,6 +15,7 @@ public class ParentPageId {
     public ParentPageId(WebDriver webDriver, String expectedUrl) {
         this.webDriver = webDriver;
         this.expectedUrl = baseUrlLogIn + expectedUrl;
+        PageFactory.initElements(webDriver, this);
     }
 
     public String getCurrentUrl() {
