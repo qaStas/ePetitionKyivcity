@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.HomeOkkPage;
+import pages.HomeOkkPetitions;
 import pages.HomePage;
 import pages.LoginPage;
 
@@ -17,9 +18,9 @@ public class ParentTest {
     WebDriver webDriver;
     protected Logger logger = Logger.getLogger(getClass());
     protected LoginPage loginPage;
-    public HomeOkkPage homeOkkPage;
+    protected HomeOkkPage homeOkkPage;
     protected HomePage homePage;
-
+    protected HomeOkkPetitions homeOkkPetitions;
 
 
     @Before
@@ -30,17 +31,17 @@ public class ParentTest {
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         loginPage = new LoginPage(webDriver);
-//        homeOkkPage = new HomeOkkPage(webDriver);
-//        homePage = new HomePage(webDriver);
+        homeOkkPage = new HomeOkkPage(webDriver);
+        homeOkkPetitions = new HomeOkkPetitions(webDriver);
+        homePage = new HomePage(webDriver);
     }
-
 
     @After
     public void tearDown() {
         webDriver.quit();
     }
 
-    protected void checkAC (String message, boolean actual, boolean expected){
+    protected void checkAC(String message, boolean actual, boolean expected) {
         if (actual != expected) {
             logger.error("AC failed: " + message);
         }
